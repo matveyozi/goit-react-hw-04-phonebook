@@ -17,14 +17,15 @@ const 	handleChange = (e) => {
 			case 'name': setName(e.target.value);
 			break;
 			case 'number': setNumber(e.target.value);
-			break;
+				break;
+			default: return;
 }
 
 	}
 
 const 	onSubmitForm = (e) => {
 		e.preventDefault()
-		const contact = {
+			/*  */	const contact = {
 			id: nanoid(5),
 			...this.state,
 		}
