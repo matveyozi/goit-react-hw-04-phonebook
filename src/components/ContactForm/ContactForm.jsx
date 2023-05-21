@@ -29,10 +29,8 @@ const 	onSubmitForm = (e) => {
 			...this.state,
 		}
 		this.props.addContact(contact)
-		this.setState({
-			name: '',
-			number: ''
-		})
+		setName('');
+		setNumber('');
 	}
 
   
