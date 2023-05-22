@@ -7,14 +7,14 @@ import Section from './Section/Section';
 
 import {useLocalStorage} from '../hooks/useLocalStorage'
 
-const initialContacts = [
-  {name: 'dsadsa',
-  number:12312312}
-]
+// const initialContacts = [
+//   {name: 'dsadsa',
+//   number:12312312}
+// ]
 
 export default function App() {
-  const [contacts, setContacts] = useLocalStorage('contacts', initialContacts)
-  const [filter, setFilter] = useState()
+  const [contacts, setContacts] = useLocalStorage('contacts', [])
+  const [filter, setFilter] = useState('')
 
   const filterContact = (event) => {
     setFilter(

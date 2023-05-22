@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import cssModule from './ContactForm.module.css'
 
 
- const ContactForm = () => {
+ const ContactForm = (props) => {
 	const [name, setName]=useState('')
 	const [number, setNumber]=useState('')
 	
@@ -27,9 +27,10 @@ const 	onSubmitForm = (e) => {
 		e.preventDefault()
 			/*  */	const contact = {
 			id: nanoid(5),
-			...this.state,
+				name,
+			number
 		}
-		this.props.addContact(contact)
+		props.addContact(contact)
 		setName('');
 		setNumber('');
 	}
